@@ -6,16 +6,16 @@ import { initSocket, recieveColor } from "./SocketService";
 import "./App.css";
 
 function Container() {
-  const { colors, setColors } = useContext(ColorsContext);
+  const { color, setColor } = useContext(ColorsContext);
   useEffect(() => {
     initSocket();
     recieveColor((color) => {
-      setColors(color);
+      setColor(color);
     });
-  }, [setColors]);
+  }, [setColor]);
 
   return (
-    <div className="App" style={{ backgroundColor: colors }}>
+    <div className="App" style={{ backgroundColor: color }}>
       <PickColor />
     </div>
   );
