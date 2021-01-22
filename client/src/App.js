@@ -1,11 +1,11 @@
-import "./App.css";
-import PickColor from "./components/PickColor";
+import Container from "./Container";
+import { ColorProvider } from "./contexts/ColorsContext";
 
 function App() {
   return (
-    <div className="App">
-      <PickColor />
-    </div>
+    <ColorProvider>
+      <Container />
+    </ColorProvider>
   );
 }
 
