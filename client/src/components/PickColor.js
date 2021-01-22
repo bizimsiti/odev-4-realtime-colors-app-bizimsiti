@@ -4,15 +4,23 @@ import ColorsContext from "../contexts/ColorsContext";
 import { sendColor } from "../SocketService";
 
 function PickColor() {
-  const { colors, setColors } = useContext(ColorsContext);
+  const { color, setColor } = useContext(ColorsContext);
 
   const handleColor = () => {
-    sendColor(colors);
+    sendColor(color);
   };
   return (
     <div className={styles.wrapper}>
-      <input type="color" onChange={(e) => setColors(e.target.value)} />
+      <input
+        type="color"
+        value={color}
+        onChange={(e) => setColor(e.target.value)}
+      />
       <button onClick={handleColor}>Change Color</button>
+      <div>
+        <div>HEX CODE</div>
+        <div>{color}</div>
+      </div>
     </div>
   );
 }
