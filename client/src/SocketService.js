@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 let socket;
 
 export const initSocket = () => {
-  socket = io("http://localhost:4000", {
+  socket = io("https://damp-sierra-05560.herokuapp.com/", {
     transports: ["websocket"],
   });
   console.log("connecting...");
