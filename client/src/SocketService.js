@@ -25,3 +25,11 @@ export const recieveColor = (cb) => {
     cb(color);
   });
 };
+
+export const getInitialColor = (cb) => {
+  if (!socket) return true;
+  socket.on("color-data", (data) => {
+    console.log("last change color", data);
+    cb(data);
+  });
+};
