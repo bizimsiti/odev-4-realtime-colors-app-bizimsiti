@@ -10,11 +10,13 @@ function Container() {
   useEffect(() => {
     initSocket();
 
+    // get color from database when opened browser
     getInitialColor((data) => {
       console.log(data);
       setColor(data);
     });
 
+    // get color from database when someone changed color
     recieveColor((color) => {
       setColor(color);
     });

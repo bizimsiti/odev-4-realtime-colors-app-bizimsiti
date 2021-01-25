@@ -18,10 +18,10 @@ export const disconnectSocket = () => {
 export const sendColor = (color) => {
   if (socket) socket.emit("new-color", color);
 };
+
 export const recieveColor = (cb) => {
   if (!socket) return true;
   socket.on("recieve-color", (color) => {
-    console.log("backenden gelen color", color);
     cb(color);
   });
 };
@@ -29,7 +29,6 @@ export const recieveColor = (cb) => {
 export const getInitialColor = (cb) => {
   if (!socket) return true;
   socket.on("color-data", (data) => {
-    console.log("last change color", data);
     cb(data);
   });
 };

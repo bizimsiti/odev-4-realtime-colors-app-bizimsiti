@@ -7,6 +7,7 @@ function PickColor() {
   const { color, setColor } = useContext(ColorsContext);
 
   const handleColor = () => {
+    // send color's value to database
     sendColor(color);
   };
   return (
