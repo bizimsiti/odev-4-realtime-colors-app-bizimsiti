@@ -14,6 +14,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("new-color", (color) => {
+    Colors.upsert(color);
     socket.broadcast.emit("recieve-color", color);
   });
 
