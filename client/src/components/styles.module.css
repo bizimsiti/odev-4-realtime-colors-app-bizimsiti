@@ -4,3 +4,15 @@
   margin: auto;
   font-size: 25px;
 }
+.hexCode {
+  width: 140px;
+  height: 100px;
+  margin-top: 10px;
+  border: 5px solid #aaa;
+  border-radius: 10px;
+  border-style: inset;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -18,8 +18,10 @@ function PickColor() {
       />
       <button onClick={handleColor}>Change Color</button>
       <div>
-        <div>HEX CODE</div>
-        <div>{color}</div>
+        <div className={styles.hexCode}>
+          <div>HEX CODE</div>
+          {color === "" ? <div>Loading...</div> : <div>{color}</div>}
+        </div>
       </div>
     </div>
   );

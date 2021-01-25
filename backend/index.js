@@ -5,7 +5,7 @@ const io = require("socket.io")(http);
 const Colors = require("./lib/Colors");
 
 app.get("", (req, res) => {
-  res.end("server is running");
+  res.end("server is local running");
 });
 io.on("connection", (socket) => {
   Colors.list((data) => {
